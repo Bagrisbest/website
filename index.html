@@ -1,0 +1,202 @@
+<style>
+    body {
+      background-color: #2c2c2c;
+    }
+  </style>
+<style>
+ 
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      top: 60px;
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: 4s;
+    }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .active {
+      z-index: 1;
+      opacity: 1;
+    }
+    .inactive {
+      z-index: 0;
+      opacity: 0;
+    }
+  </style>
+  <style>
+    
+
+    .navbar {
+  display: flex;
+  justify-content: flex-end; /* aligns contents to the right of the element */
+  margin: auto;
+  background-color: #757575;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+}
+
+.navbar a {
+  display: inline-block;
+  margin: auto 2%;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  /* other styles */
+}
+  
+.navbar a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* adds space to the right of the logo */
+  margin-left: 5%;
+}
+
+
+  </style>
+
+
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <a href="#1">Odkaz 1</a>
+    <a href="#2">Odkaz 2</a>
+    <a href="#3">Odkaz 3</a>
+  </nav>
+  
+  
+
+
+  <style>
+.btn {
+  position: absolute;
+  bottom: 20px;
+  left: 65%;
+  transform: translateX(-50%);
+  width: 200px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+  </style>
+
+<div class="slider">
+    <div class="slide">
+      <img src="imgs/mc.jpg" alt="Obrázek 1">
+      <button class="btn">Tlačítko</button>
+    </div>
+    <div class="slide">
+      <img src="imgs/png1.jpg" alt="Obrázek 2">
+      <button class="btn">gey</button>
+    </div>
+    <div class="slide">
+      <img src="imgs/png2.jpg" alt="Obrázek 3">
+      <button class="btn">gey</button>
+    </div>
+  </div>
+
+  <script>
+    let slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    let slideInterval = setInterval(nextSlide, 10000);
+  
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      slides[currentSlide].classList.add('inactive');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.remove('inactive');
+      slides[currentSlide].classList.add('active');
+    }
+  </script>
+  
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column; /* displays the elements in a column */
+    }
+    .image {
+      width: 200px;
+      height: 200px;
+    }
+    .boxes {
+      display: flex;
+      margin-top: 20px; /* adds space between the image and the boxes */
+    }
+    .box {
+      height: 100px;
+      border-radius: 20px;
+      margin: 10px;
+    }
+    .box:nth-of-type(2) {
+      width: 300px;
+    }
+    .box:not(:nth-of-type(2)) {
+      width: 200px;
+    }
+    .boxes {
+  display: flex;
+  border-top: 1px solid black; /* adds a horizontal line on top of the boxes */
+}
+.box {
+  height: 300px;
+  border-radius: 40px;
+  margin: 0px;
+  background-color: rgb(85, 85, 85);
+}
+.box:nth-of-type(2) {
+  width: 300px;
+}
+
+
+  </style>
+  
+
+  <style>
+ .boxes {
+  display: flex;
+  border-top: 1px solid black;
+  margin-top: 100px; /* adds a margin of 100 pixels at the top of the boxes */
+}
+.box {
+  height: 300px;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box:nth-of-type(2) {
+  width: 400px;
+}
+.box:not(:nth-of-type(2)) {
+  width: 300px;
+  border-right: 1px solid black;
+}
+  </style>
+
+<div class="container">
+  <div class="boxes">
+    <div class="box">a1</div>
+    <div class="box">a1</div>
+    <div class="box">a1</div>
+  </div>
+</div>
